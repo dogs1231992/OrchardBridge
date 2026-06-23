@@ -1,0 +1,11 @@
+pymobiledevice3>=9.20.0
+Pillow>=10.0.0
+pillow-heif>=0.16.0
+cryptography>=41.0.0
+click>=8.0.0
+construct>=2.10.0
+av>=14.0.0
+pystray>=0.19.5
+tkinterdnd2>=0.3.0
+send2trash>=1.8.2
+pyinstaller>=6.0.0

@@ -80,7 +80,7 @@ def get_theme(mode: str | None) -> dict:
 # Updated after preferences are loaded.
 THEME = get_theme("light")
 
-APP_VERSION = "v1.2026.06.23"
+APP_VERSION = "v2.2026.09.19"
 # Auto-detection polling intervals are centralized here so they are easy to tune.
 # Source mode can probe more aggressively because it runs a normal Python interpreter.
 # Frozen onefile mode probes less often because the bundled runtime is heavier.
@@ -195,7 +195,7 @@ class BackupApp:
         """Normalize labels enough for update checks without imposing SemVer.
 
         The public version label is intentionally human-readable, for example
-        v1.2026.06.23.  The app only needs to know whether the label published
+        v2.2026.09.19.  The app only needs to know whether the label published
         on GitHub differs from the bundled label.
         """
         text = str(value or "").strip()
@@ -1583,9 +1583,9 @@ class BackupApp:
             padx=16,
         ).pack(fill=tk.X)
         note = self._t(
-            "OrchardBridge v1.2026.06.23 是第一個準備發布的版本。版本號採用 v主版本.日期，方便日後對照發布日期。\n\n"
+            "OrchardBridge v2.2026.09.19 是相容性更新版本，更新 pymobiledevice3 以改善新版 iOS 27.x 裝置連線、媒體存取與完整備份流程的穩定性。\n\n"
             "此專案是獨立工具，產品名稱避免使用任何第三方商標；若介面或文件提到特定裝置名稱，只是為了描述相容性。",
-            "OrchardBridge v1.2026.06.23 is the first release-ready version. The version label uses vMajor.YYYY.MM.DD so future releases can be matched to their release dates.\n\n"
+            "OrchardBridge v2.2026.09.19 is a compatibility update. It updates pymobiledevice3 to improve connection, media access, and full-backup stability for newer iOS 27.x devices.\n\n"
             "This is an independent tool. The product name avoids third-party trademarks; any device names in the UI or documentation are used only to describe compatibility.",
         )
         note_label = tk.Label(

@@ -237,7 +237,7 @@ class DevicePanelFrame:
 
         tk.Label(
             f,
-            text=self._t("OrchardBridge\nv1.2026.06.23", "OrchardBridge\nv1.2026.06.23"),
+            text=self._t("OrchardBridge\nv2.2026.09.19", "OrchardBridge\nv2.2026.09.19"),
             bg=T["surface"],
             fg=T["border"],
             font=ui_font(8),

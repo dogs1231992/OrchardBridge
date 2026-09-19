@@ -4,6 +4,9 @@
 
 OrchardBridge focuses on iPhone backup workflows. It is **not** an Android backup tool.
 
+**Current release:** `v2.2026.09.19`  
+This release rebuilds the Windows EXE with `pymobiledevice3==11.15.5` for improved compatibility with newer iOS 27.x devices. Existing users on older iOS versions do not need to change their workflow.
+
 > OrchardBridge is an independent project and is not affiliated with, endorsed by, or sponsored by Apple Inc. Apple, iPhone, iOS, and related names are trademarks of Apple Inc. They are mentioned here only to describe device compatibility and required system components. OrchardBridge does not use any third-party trademark as the product name.
 
 ---
@@ -55,6 +58,18 @@ If the device is not detected, install or repair one of the following Apple comp
 
 - **Apple Devices** for Windows, or
 - **iTunes** for Windows, which usually includes Apple Mobile Device Support.
+
+---
+
+### iOS 27.x / pymobiledevice3 compatibility
+
+The `v2.2026.09.19` release pins the source dependency to:
+
+```text
+pymobiledevice3==11.15.5
+```
+
+This makes source builds and PyInstaller rebuilds reproducible and ensures that the packaged EXE includes the newer `pymobiledevice3` compatibility fixes available at build time. Already-published EXE files do not automatically receive Python dependency updates; they must be rebuilt and re-uploaded.
 
 ---
 
@@ -309,6 +324,9 @@ MIT License. See `LICENSE` for details.
 
 OrchardBridge 專注於 iPhone 備份流程，**不是 Android 備份工具**。
 
+**目前版本：** `v2.2026.09.19`  
+這個版本使用 `pymobiledevice3==11.15.5` 重新打包 Windows EXE，以改善新版 iOS 27.x 裝置的相容性。舊版 iOS 使用者的操作流程不需要改變。
+
 > OrchardBridge 是獨立專案，與 Apple Inc. 沒有從屬、授權、背書或贊助關係。Apple、iPhone、iOS 與相關名稱是 Apple Inc. 的商標；本文件只在描述相容性與必要系統元件時提及。OrchardBridge 沒有把第三方商標放進軟體名稱中。
 
 ---
@@ -360,6 +378,18 @@ OrchardBridge 依賴 `pymobiledevice3` 所使用的 Apple Mobile Device / usbmux
 
 - Windows 版 **Apple Devices**，或
 - Windows 版 **iTunes**，通常會包含 Apple Mobile Device Support。
+
+---
+
+### iOS 27.x / pymobiledevice3 相容性
+
+`v2.2026.09.19` 版本將原始碼依賴固定為：
+
+```text
+pymobiledevice3==11.15.5
+```
+
+這樣可以讓原始碼執行與 PyInstaller 重新打包結果更可重現，也能確保打包出的 EXE 包含建置當下可用的新版 `pymobiledevice3` 相容性修正。已經發布過的 EXE 不會自動取得 Python 依賴套件更新；如果要讓使用者拿到新版依賴，必須重新打包並重新上傳 EXE。
 
 ---
 

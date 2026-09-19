@@ -1,12 +1,30 @@
 # Changelog
 
-This project currently uses a date-based first-version label. All items below are part of the same initial release candidate:
+This project uses date-based release labels. The current release is:
 
 ```text
-v1.2026.06.23
+v2.2026.09.19
 ```
 
-The entries are written as release notes for the first public version, not as a record of internal back-and-forth development iterations.
+---
+
+## v2.2026.09.19 — iOS 27.x compatibility rebuild
+
+### Dependency update
+
+- Pinned `pymobiledevice3` to `11.15.5` in `requirements.txt`.
+- Rebuilds made from this source tree will bundle the newer `pymobiledevice3` compatibility fixes into the portable Windows EXE.
+- The previously published EXE does not update automatically when Python packages are updated upstream; a new EXE build is required.
+
+### Compatibility focus
+
+- Intended as a maintenance release for newer iOS 27.x environments while keeping the existing OrchardBridge UI and workflow unchanged.
+- Existing photo backup, optional HEIC/HEIF conversion, full-device backup, Toolbox, Settings, localization, icon, and packaging workflows are retained from the first public release.
+
+### Documentation
+
+- Updated README to mention the current release number and the pinned `pymobiledevice3==11.15.5` dependency.
+- Updated the About-page version note to describe this release as a compatibility update rather than the first release-ready build.
 
 ---
 
@@ -14,7 +32,7 @@ The entries are written as release notes for the first public version, not as a 
 
 ### Core purpose
 
-OrchardBridge is a Windows desktop utility for backing up photos, videos, and full-device data from supported USB-connected phones to local storage. It provides a graphical workflow for users who prefer not to use command-line tools.
+OrchardBridge is a Windows desktop utility for backing up photos, videos, and full-device data from USB-connected iPhone / iOS devices to local storage. It provides a graphical workflow for users who prefer not to use command-line tools.
 
 ### User-facing features
 
@@ -117,15 +135,35 @@ release\OrchardBridge.exe
 
 ---
 
+---
+
 # 更新紀錄（中文）
 
-本專案目前使用日期式的第一版版本號。以下內容全部屬於同一個初始釋出候選版本：
+本專案使用日期式版本號。目前版本為：
 
 ```text
-v1.2026.06.23
+v2.2026.09.19
 ```
 
-這裡的內容是第一個公開版本的整理，不是內部來回修改過程的版本紀錄。
+---
+
+## v2.2026.09.19 — iOS 27.x 相容性重新打包版本
+
+### 依賴套件更新
+
+- 將 `requirements.txt` 中的 `pymobiledevice3` 固定為 `11.15.5`。
+- 使用此原始碼重新打包時，產出的 Windows 可攜式 EXE 會包含新版 `pymobiledevice3` 相容性修正。
+- 先前已經發布的 EXE 不會因為上游 Python 套件更新而自動更新；如果要讓使用者取得新版依賴，必須重新打包 EXE。
+
+### 相容性重點
+
+- 這是針對新版 iOS 27.x 環境的維護更新，既有 OrchardBridge 介面與使用流程維持不變。
+- 照片備份、備份後 HEIC/HEIF 轉檔、完整裝置備份、工具箱、設定、多語系、圖示與打包流程都沿用第一個公開版本的功能。
+
+### 文件
+
+- README 已加入目前版本號與 `pymobiledevice3==11.15.5` 固定依賴說明。
+- 關於頁版本說明已改為相容性更新，不再描述成第一個 release-ready build。
 
 ---
 
@@ -133,7 +171,7 @@ v1.2026.06.23
 
 ### 核心目的
 
-OrchardBridge 是一套 Windows 桌面工具，用來將支援的 USB 連線手機中的照片、影片與完整裝置資料備份到本機儲存空間。它提供圖形化流程，讓使用者不需要操作命令列工具。
+OrchardBridge 是一套 Windows 桌面工具，用來將USB 連線的 iPhone / iOS 裝置中的照片、影片與完整裝置資料備份到本機儲存空間。它提供圖形化流程，讓使用者不需要操作命令列工具。
 
 ### 使用者可見功能
 

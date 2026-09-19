@@ -1,6 +1,6 @@
 {
-  "version": "v1.2026.06.23",
+  "version": "v2.2026.09.19",
   "release_url": "https://github.com/dogs1231992/OrchardBridge/releases/latest",
   "download_url": "https://github.com/dogs1231992/OrchardBridge/releases/latest",
-  "notes": "Initial portable release. Update this file when publishing a newer release."
+  "notes": "Compatibility rebuild. Updated pymobiledevice3 to 11.15.5 for improved iOS 27.x compatibility."
 }
